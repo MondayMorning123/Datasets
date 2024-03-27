@@ -68,11 +68,6 @@ for name, model in models:
     print('%s: %f (%f)' % (name, cv_results.mean(), cv_results.std()))
 
 
-plt.boxplot(results, labels=names)
-plt.title('Algorithm Comparison')
-plt.show()
-
-
 model = SVC(gamma='auto')
 model.fit(X_train, Y_train)
 predictions = model.predict(X_validation)
